@@ -1,0 +1,5 @@
+
+        
+        <!-- 配置tocmat的映射磁盘 -->
+		<Context path="/img" docBase="D:\\img\\upload" reloadable="true" />
+      

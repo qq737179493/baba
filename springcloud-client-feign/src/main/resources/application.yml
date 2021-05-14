@@ -1,0 +1,35 @@
+
+server:
+  port: 8091
+
+application:
+  #设定应用名
+  name: client-feign
+
+#配置MongoDB
+data:
+  mongodb:
+    port: 27017
+    database: fsj
+    host: 127.0.0.1
+
+eureka:
+  client:
+    #配置eureka服务地址
+    #默认地址为：http://localhost:8761/eureka/ 17
+    service‐url:
+      defaultZone: http://localhost:8080/eureka
+
+feign:
+  hystrix:
+  #开启断路器
+    enabled: false
+
+ribbon:
+  ReadTimeout: 120000  #请求处理的超时时间
+  ConnectTimeout: 30000  #请求连接的超时时间
+### 配置网关反向代理
+zuul:
+  host:
+    connect-timeout-millis: 60000  #HTTP连接超时大于Hystrix的超时时间------自己新增的------》
+    socket-timeout-millis: 60000   #socket超时

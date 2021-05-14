@@ -1,0 +1,22 @@
+
+server:
+  port: 8082
+
+spring:
+  application:
+    #设定应用名
+    name: povider
+
+#配置MongoDB
+  data:
+    mongodb:
+      port: 27017
+      database: fsj
+      host: 127.0.0.1
+
+eureka:
+  client:
+    #配置eureka服务地址
+    #默认地址为：http://localhost:8761/eureka/ 17
+    service‐url:
+      defaultZone: http://localhost:8080/eureka
